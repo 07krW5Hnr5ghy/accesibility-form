@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/index.css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet"/>
+        <title>Update profile form</title>
+    </head>
+    <body>
+        <div class="form-container">
+            <form class="form" aria-labelledby="form-title">
+                <!-- Form title for assistive technologies -->
+                <h1 id="form-title" class="visually-hidden">Update Profile Form</h1>
+                <label for="full-name" class="label">Full Name</label>
+                <div class="input-container" tabindex="1">
+                    <input id="full-name" class="input" placeholder="What should we call you?" aria-describedby="full-name-desc"/>
+                    <span id="full-name-desc" class="visually-hidden">Enter your full name</span>
+                    <div class="eye-container">
+                        <button class="button-eye no-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <span></span>
+                <label for="email" class="label">Email</label>
+                <div class="input-container input-container-error" tabindex="2">
+                    <input id="email" type="email" class="input" value="john@doe.com" aria-invalid="true" aria-describedby="email-error"/>
+                    <div class="eye-container">
+                        <button class="button-eye no-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="error-message" id="email-error" role="alert">Email is already taken.</span>
+                <label for="password" class="label">Enter password</label>
+                <div class="input-container" tabindex="3">
+                    <input id="password" type="password" class="input" placeholder="xxxxxxxx" aria-describedby="password-desc"/>
+                    <span id="password-desc" class="visually-hidden">Password must be at least 8 characters</span>
+                    <div class="eye-container">
+                        <button class="button-eye" aria-label="show new password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="password-visibility" role="alert">Password is hidden</span>
+                <label for="confirm" class="label">Confirm password</label>
+                <div class="input-container" tabindex="4">
+                    <input id="confirm" type="password" class="input" placeholder="xxxxxxxx" aria-describedby="confirm-desc"/>
+                    <span id="confirm-desc" class="visually-hidden">Re-enter your password to confirm</span>
+                    <div class="eye-container">
+                        <button class="button-eye" aria-label="show confirm password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="password-visibility" role="alert">Password is hidden</span>
+                <div class="button-container">
+                    <button class="button" aria-label="Update Profile">Update Profile</button>
+                </div>
+            </form>
+            <div class="form-status" aria-labelledby="profile-status-title">
+                <h2 id="profile-status-title" class="visually-hidden">Profile Completion Status</h2>
+                <div class="form-percent-container">
+                    <div class="form-percent" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress Bar">
+                        <span>75%</span>
+                    </div>
+                </div>
+                <h4>Profile completeness</h4>
+                <div class="form-steps">
+                    <ul>
+                        <li class="completed">Create Account</li>
+                        <li class="completed">Update Roadmap Progress</li>
+                        <li class="completed">Setup Public Profile</li>
+                        <li>Complete your first project</li>
+                        <li>Invite your Friends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
